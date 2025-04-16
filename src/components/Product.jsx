@@ -55,50 +55,6 @@ function Product(props) {
         <button onClick={() => setIsEditing(true)}>Editar</button>
       )}
     </div>
-
-        /*<div
-            className={`product ${emStock ? "in-stock" : "out-of-stock"}`}>
-            {edit ? ( 
-                <>
-                  <input
-                  type="text"
-                  value={novoNome}
-                  onChange={(e) => setNovoNome(e.target.value)}
-                  />
-                  <input
-                  type="number"
-                  value={novoPreco}
-                  onChange={(e) => setNovoPreco(e.target.value)}
-                  />
-                </>
-            )
-        
-        :(<>
-            <h3 className='nome'>{nome}</h3>
-            <h3 className='preco'>{preco}</h3>
-            
-        </>)}
-            <h3 className='categoria'>{categoria}</h3>
-            
-
-            <button onClick={() => toggleStock(id)}>
-                {emStock ? "Em Stock" : "Fora de Stock"}
-            </button>
-
-            <button className='delete' onClick={() => eliminarProduct(id)}>
-                Eliminar
-            </button>
-
-            {edit?
-                (<button className='editProduct' onClick={handleEditingProduct}>
-                    Guardar
-                </button>) : (
-                <button className='edit' onClick={() => setEdit(true)}>
-                editar
-            </button>
-             ) }
-
-        </div>*/
     )
 }
 
