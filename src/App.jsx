@@ -57,6 +57,13 @@ function App() {
 
     setMessage("Product Inserted.")
   }
+  const atualizarProduto = (id, novoNome, novoPreco) => {
+    const updatedProducts = products.map(product =>
+      product.id === id ? { ...product, nome: novoNome, preco: novoPreco } : product
+    );
+    setProducts(updatedProducts);
+  };
+ 
 
   return (<div className='App'>
 
@@ -91,6 +98,7 @@ function App() {
           product={product}
           toggleStock={toggleStock}
           eliminarProduct={eliminarProduct}
+          atualizarProduto={atualizarProduto}
         />)}
     </div>
   </div>
