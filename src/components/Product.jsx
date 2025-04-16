@@ -22,11 +22,12 @@ function Product(props) {
         <div className={`product ${emStock ? "in-stock" : "out-of-stock"}`}>
       {isEditing ? (
         <>
-          <input
+          <input className='edit'
             value={editedNome}
             onChange={(e) => setEditedNome(e.target.value)}
           />
-          <input
+          <br></br>
+          <input className='edit'
             type="number"
             value={editedPreco}
             onChange={(e) => setEditedPreco(e.target.value)}
@@ -35,7 +36,7 @@ function Product(props) {
       ) : (
         <>
           <h3 className='nome'>{nome}</h3>
-          <h3 className='preco'>{preco}</h3>
+          <h3 className='preco'>{preco} €</h3>
         </>
       )}
  
